@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Road Side Unit using Blockchain and IoT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Road Side Unit using Blockchain and IoT</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/model">RSU1 Data</a></li>
+        <li><a href="/model1">RSU2 Data</a></li>
+        <li><a href="/model2">RSU3 Data</a></li>
+        <li><a href="/model3">RSU4 Data</a></li>
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+    </div>
+    </nav>
+    <br/><br/>
+    <div class="row">
+        <div class="container col-sm-2"></div>
+        <div class="container col-sm-4">
+            <center><h3>RSU1 Data Feed</h3></center>
+            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2456469/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>          </div>
+        <div class="container col-sm-4">
+            <center><h3>RSU2 Data Feed</h3></center>
+            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2456475/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>          </div>
+    </div>
+    <div class="row">
+        <div class="container col-sm-2"></div>
+        <div class="container col-sm-4">
+            <center><h3>RSU3 Data Feed</h3></center>
+            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2456478/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+        </div>
+        <div class="container col-sm-4">
+            <center><h3>RSU4 Data Feed</h3></center>
+            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2456482/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+        </div>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</body>
+</html>
