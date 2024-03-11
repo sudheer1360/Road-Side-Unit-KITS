@@ -57,14 +57,14 @@ def preprocessData(data):
 app=Flask(__name__)
 app.secret_key='1234'
 
-def connect_with_agriculture(acc):
+def connect_with_RSU(acc):
     web3=Web3(HTTPProvider('http://127.0.0.1:7545'))
     if acc==0:
         web3.eth.defaultAccount=web3.eth.accounts[0]
     else:
         web3.eth.defaultAccount=acc
 
-    artifact_path="../build/contracts/agriculture.json"
+    artifact_path="./build/contracts/RSU.json"
 
     with open(artifact_path) as f:
         artifact_json=json.load(f)
@@ -88,7 +88,7 @@ def indexdata():
     password=request.form['password']
     print(username,password)
     if True:
-        contract,web3=connect_with_agriculture(0)
+        contract,web3=connect_with_RSU(0)
         tx_hash=contract.functions.addUser(username,password).transact()
         web3.eth.waitForTransactionReceipt(tx_hash)
         return render_template('index.html',res='user added')
@@ -100,7 +100,7 @@ def logindata():
     username=request.form['username1']
     password=request.form['password1']
     print(username,password)
-    contract,web3=connect_with_agriculture(0)
+    contract,web3=connect_with_RSU(0)
     _usernames,_passwords=contract.functions.viewUsers().call()
     if username not in _usernames:
         return render_template('login.html',err='you dont have any account')
